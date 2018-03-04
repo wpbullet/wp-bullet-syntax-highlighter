@@ -3,7 +3,7 @@
 Plugin Name: WP Bullet Syntax Highlighting
 Plugin URI: https://dandulaney.com
 Description: Custom PrismJS integration for WP Bullet
-Version: 1.2
+Version: 1.2.1
 Author: Dan Dulaney
 Author URI: https://dandulaney.com
 License: GPLv2

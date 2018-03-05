@@ -4,6 +4,10 @@
         //url argument holds the absolute url of our plugin directory
         init : function(ed, url) {
 
+            //Add shortcuts
+	        ed.shortcuts.add('alt+p','Pre Wrap Shortcut','prism_pre_command');
+	        ed.shortcuts.add('alt+c','Code Wrap Shortcut','prism_code_command');
+
             //add new button     
             ed.addButton("prism_pre", {
                 title : "Wrap in Pre + Code Tags",

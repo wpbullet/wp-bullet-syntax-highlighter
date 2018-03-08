@@ -10,6 +10,13 @@ License: GPLv2
 License URI: 
 */
 
+/**
+ * Goodbye if someone access to the file directly.
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Access denied.' );
+}
+
 //enqueues all css files needed
 function bullet_prism_enqueue_style() {
 	wp_enqueue_style( 'bullet-prism-style', plugin_dir_url( __FILE__ ) . 'css/prism.css', false ); 

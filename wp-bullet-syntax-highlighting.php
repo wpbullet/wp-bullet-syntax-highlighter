@@ -3,7 +3,7 @@
 Plugin Name: WP Bullet Syntax Highlighting
 Plugin URI: https://dandulaney.com
 Description: Custom PrismJS integration for WP Bullet
-Version: 1.2.1
+Version: 1.3.0
 Author: Dan Dulaney
 Author URI: https://dandulaney.com
 License: GPLv2
@@ -30,6 +30,13 @@ function bullet_prism_enqueue_script() {
 add_action( 'wp_enqueue_scripts', 'bullet_prism_enqueue_style' );
 add_action( 'wp_enqueue_scripts', 'bullet_prism_enqueue_script' );
 
+//Removes duplicate code button from text editor
+function bullet_prism_remove_extra_text_button( $qtInit ) {
+
+	$qtInit['buttons'] = 'strong,em,link,block,del,ins,img,ul,ol,li,more,spell,close';
+	return $qtInit;
+}
+add_filter('quicktags_settings', 'bullet_prism_remove_extra_text_button');
 
 //Adds buttons to the text editor tab
 //These buttons wrap selected text in prism pre and code tags
@@ -95,6 +102,8 @@ function register_buttons_editor($buttons) {
     //register buttons with their id.
     array_push($buttons, "prism_pre");
     array_push($buttons, "prism_code");
+    array_push($buttons, "prism_pre_select");
+    array_push($buttons, "prism_code_select");
     return $buttons;
 }
 

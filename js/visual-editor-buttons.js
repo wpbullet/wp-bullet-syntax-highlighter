@@ -19,7 +19,119 @@
                 cmd : "prism_code_command",
                 image : url+"/c_key.png"
             });
+		
+            //add new select dropdown buttons     
+            ed.addButton("prism_pre_select", {
+		title: "Pre Language",		
+		type: "menubutton",
+                image: url+"/p_select.png",        	
+		menu: [{
+		
+			text: 'BASH',		
+			onclick: function() {
+               			var return_text = '<pre class="language-bash"><code class="language-bash">//Paste Your Code Here</code></pre>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	},
+		{
+		
+			text: 'PHP',		
+			onclick: function() {
+               			var return_text = '<pre class="language-php"><code class="language-php">//Paste Your Code Here</code></pre>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	},
+		{
+		
+			text: 'VCL',		
+			onclick: function() {
+               			var return_text = '<pre class="language-vcl"><code class="language-vcl">//Paste Your Code Here</code></pre>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	},
+		{
+		
+			text: 'SQL',		
+			onclick: function() {
+               			var return_text = '<pre class="language-sql"><code class="language-sql">//Paste Your Code Here</code></pre>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	},
+		{
+		
+			text: 'NGINX',		
+			onclick: function() {
+               			var return_text = '<pre class="language-nginx"><code class="language-nginx">//Paste Your Code Here</code></pre>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	},
+		{
+		
+			text: 'APACHE',		
+			onclick: function() {
+               			var return_text = '<pre class="language-apacheconf"><code class="language-apacheconf">//Paste Your Code Here</code></pre>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	}]
+	});
 
+
+            ed.addButton("prism_code_select", {
+		title: "Code Language",		
+		type: "menubutton",
+                image: url+"/c_select.png",        	
+		menu: [{
+		
+			text: 'BASH',		
+			onclick: function() {
+               			var return_text = '<code class="language-bash">//Paste Your Code Here</code>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	},
+		{
+		
+			text: 'PHP',		
+			onclick: function() {
+               			var return_text = '<code class="language-php">//Paste Your Code Here</code>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	},
+		{
+		
+			text: 'VCL',		
+			onclick: function() {
+               			var return_text = '<code class="language-vcl">//Paste Your Code Here</code>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	},
+		{
+		
+			text: 'SQL',		
+			onclick: function() {
+               			var return_text = '<code class="language-sql">//Paste Your Code Here</code>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	},
+		{
+		
+			text: 'NGINX',		
+			onclick: function() {
+               			var return_text = '<code class="language-nginx">//Paste Your Code Here</code>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	},
+		{
+		
+			text: 'APACHE',		
+			onclick: function() {
+               			var return_text = '<code class="language-apacheconf">//Paste Your Code Here</code>';
+               			ed.execCommand("mceInsertContent", 0, return_text);
+            		}
+        	}]
+	});
+
+		
+		
             //buttons functionality.
             ed.addCommand("prism_pre_command", function() {
                 var selected_text = ed.selection.getContent({format : "html"});

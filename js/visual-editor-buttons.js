@@ -29,7 +29,7 @@
 		
 			text: 'BASH',		
 			onclick: function() {
-               			var return_text = '<pre class="language-bash"><code class="language-bash">//Paste Your Code Here</code></pre>';
+               			var return_text = '<pre class="language-bash"><code>//Paste Your Code Here</code></pre>';
                			ed.execCommand("mceInsertContent", 0, return_text);
             		}
         	},
@@ -37,7 +37,7 @@
 		
 			text: 'PHP',		
 			onclick: function() {
-               			var return_text = '<pre class="language-php"><code class="language-php">//Paste Your Code Here</code></pre>';
+               			var return_text = '<pre class="language-php"><code>//Paste Your Code Here</code></pre>';
                			ed.execCommand("mceInsertContent", 0, return_text);
             		}
         	},
@@ -45,7 +45,7 @@
 		
 			text: 'VCL',		
 			onclick: function() {
-               			var return_text = '<pre class="language-vcl"><code class="language-vcl">//Paste Your Code Here</code></pre>';
+               			var return_text = '<pre class="language-vcl"><code>//Paste Your Code Here</code></pre>';
                			ed.execCommand("mceInsertContent", 0, return_text);
             		}
         	},
@@ -53,7 +53,7 @@
 		
 			text: 'SQL',		
 			onclick: function() {
-               			var return_text = '<pre class="language-sql"><code class="language-sql">//Paste Your Code Here</code></pre>';
+               			var return_text = '<pre class="language-sql"><code>//Paste Your Code Here</code></pre>';
                			ed.execCommand("mceInsertContent", 0, return_text);
             		}
         	},
@@ -61,7 +61,7 @@
 		
 			text: 'NGINX',		
 			onclick: function() {
-               			var return_text = '<pre class="language-nginx"><code class="language-nginx">//Paste Your Code Here</code></pre>';
+               			var return_text = '<pre class="language-nginx"><code>//Paste Your Code Here</code></pre>';
                			ed.execCommand("mceInsertContent", 0, return_text);
             		}
         	},
@@ -69,7 +69,7 @@
 		
 			text: 'APACHE',		
 			onclick: function() {
-               			var return_text = '<pre class="language-apacheconf"><code class="language-apacheconf">//Paste Your Code Here</code></pre>';
+               			var return_text = '<pre class="language-apacheconf"><code>//Paste Your Code Here</code></pre>';
                			ed.execCommand("mceInsertContent", 0, return_text);
             		}
         	}]
@@ -82,7 +82,7 @@
                 image: url+"/c_select.png",        	
 		menu: [{
 		
-			text: 'BASH',		
+			text: 'bash',
 			onclick: function() {
                			var return_text = '<code class="language-bash">//Paste Your Code Here</code>';
                			ed.execCommand("mceInsertContent", 0, return_text);
@@ -114,7 +114,7 @@
         	},
 		{
 		
-			text: 'NGINX',		
+			text: 'nginx',
 			onclick: function() {
                			var return_text = '<code class="language-nginx">//Paste Your Code Here</code>';
                			ed.execCommand("mceInsertContent", 0, return_text);
@@ -122,7 +122,7 @@
         	},
 		{
 		
-			text: 'APACHE',		
+			text: 'Apache',
 			onclick: function() {
                			var return_text = '<code class="language-apacheconf">//Paste Your Code Here</code>';
                			ed.execCommand("mceInsertContent", 0, return_text);

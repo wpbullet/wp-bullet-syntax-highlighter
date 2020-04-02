@@ -193,6 +193,8 @@ div.code-toolbar > .toolbar span {
 	background: rgba(34,116,165,0.7);
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
 	border-radius: .32em;
+    height: 20px;
+    display: block;
 }
 
 div.code-toolbar > .toolbar a:hover,
@@ -207,9 +209,9 @@ div.code-toolbar > .toolbar span:focus {
 
 div.code-toolbar > .toolbar a:hover,
 div.code-toolbar > .toolbar a:focus {
-	
+
 	color:#d3d3d3;
-	
+
 }
 
 pre.line-numbers {

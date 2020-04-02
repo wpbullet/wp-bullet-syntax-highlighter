@@ -7,7 +7,7 @@ Version: 1.3.0
 Author: Dan Dulaney
 Author URI: https://dandulaney.com
 License: GPLv2
-License URI: 
+License URI:
 */
 
 /**
@@ -19,13 +19,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 //enqueues all css files needed
 function bullet_prism_enqueue_style() {
-	wp_enqueue_style( 'bullet-prism-style', plugin_dir_url( __FILE__ ) . 'css/prism.css', false ); 
-	
+	wp_enqueue_style( 'bullet-prism-style', plugin_dir_url( __FILE__ ) . 'css/prism.css', false );
+
 }
 //enqueues all js files needed
 function bullet_prism_enqueue_script() {
-	wp_enqueue_script( 'bullet-prism-js', plugin_dir_url( __FILE__ ) . 'js/prism.js', false ); 
-	wp_enqueue_style( 'dashicons' );
+	wp_enqueue_script( 'bullet-prism-js', plugin_dir_url( __FILE__ ) . 'js/prism.js', false );
 }
 add_action( 'wp_enqueue_scripts', 'bullet_prism_enqueue_style' );
 add_action( 'wp_enqueue_scripts', 'bullet_prism_enqueue_script' );
@@ -45,7 +44,7 @@ function bullet_prism_js_text_button_script() {
     if(wp_script_is("quicktags")) {
         ?>
             <script type="text/javascript">
-                
+
                 //this function is used to retrieve the selected text from the text editor
                 function getSel() {
 
@@ -55,14 +54,14 @@ function bullet_prism_js_text_button_script() {
                     return txtarea.value.substring(start, finish);
                 }
 
-                QTags.addButton( 
-                    "prism_defaults", 
-                    "pre", 
+                QTags.addButton(
+                    "prism_defaults",
+                    "pre",
                     callback
                 );
-                QTags.addButton( 
-                    "prism_defaults2", 
-                    "code", 
+                QTags.addButton(
+                    "prism_defaults2",
+                    "code",
                     callbackCode
                 );
 

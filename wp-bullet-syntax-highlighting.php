@@ -20,11 +20,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 //enqueues all css files needed
 function bullet_prism_enqueue_style() {
 	wp_enqueue_style( 'bullet-prism-style', plugin_dir_url( __FILE__ ) . 'css/prism.css', false );
-
 }
 //enqueues all js files needed
 function bullet_prism_enqueue_script() {
-	wp_enqueue_script( 'bullet-prism-js', plugin_dir_url( __FILE__ ) . 'js/prism.js', false );
+    wp_enqueue_script(
+        'wp-bullet-clipboard.min.js',
+        plugins_url( 'js/clipboard.min.js', __FILE__ ),
+        null,
+        '1.3.0',
+        false
+    );
+
+	wp_enqueue_script(
+        'bullet-prism-js',
+		plugins_url( 'js/prism.js', __FILE__ ),
+        null,
+        '1.3.0',
+        true
+    );
 }
 add_action( 'wp_enqueue_scripts', 'bullet_prism_enqueue_style' );
 add_action( 'wp_enqueue_scripts', 'bullet_prism_enqueue_script' );

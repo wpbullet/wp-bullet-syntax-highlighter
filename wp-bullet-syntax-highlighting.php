@@ -33,7 +33,7 @@ function bullet_prism_enqueue_script() {
 
 	wp_enqueue_script(
         'bullet-prism-js',
-		plugins_url( 'js/prism.js', __FILE__ ),
+		plugins_url( 'js/prism.min.js', __FILE__ ),
         null,
         '1.3.0',
         true

@@ -17,13 +17,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Access denied.' );
 }
 
-//enqueues all css files needed
-function bullet_prism_enqueue_style() {
-	wp_enqueue_style( 'bullet-prism-style', plugin_dir_url( __FILE__ ) . 'css/prism.css', false );
-}
 //enqueues all js files needed
 function bullet_prism_enqueue_script() {
-    wp_enqueue_script(
+	wp_enqueue_style(
+        'bullet-prism-style',
+		plugins_url( 'css/prism.css', __FILE__ ),
+        false
+    );
+
+	wp_enqueue_script(
         'wp-bullet-clipboard.min.js',
         plugins_url( 'js/clipboard.min.js', __FILE__ ),
         null,
@@ -39,7 +41,6 @@ function bullet_prism_enqueue_script() {
         true
     );
 }
-add_action( 'wp_enqueue_scripts', 'bullet_prism_enqueue_style' );
 add_action( 'wp_enqueue_scripts', 'bullet_prism_enqueue_script' );
 
 //Removes duplicate code button from text editor

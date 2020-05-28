@@ -29,7 +29,7 @@ function bullet_prism_enqueue_script() {
         'wp-bullet-clipboard.min.js',
         plugins_url( 'js/clipboard.min.js', __FILE__ ),
         null,
-        '1.3.0',
+        '2.0.6',
         false
     );
 
